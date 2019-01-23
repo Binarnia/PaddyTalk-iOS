@@ -137,6 +137,7 @@
                                                  [weakSelf showAdvanced];
                                              }]];
     } else {
+        /*
         [section addItem:[OWSTableItem
                              itemWithCustomCellBlock:^{
                                  UITableViewCell *cell = [OWSTableItem newCell];
@@ -168,6 +169,7 @@
                                  return cell;
                              }
                                          actionBlock:nil]];
+         */
     }
 
     [section addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"SETTINGS_INVITE_TITLE",
@@ -184,11 +186,13 @@
                                               actionBlock:^{
                                                   [weakSelf showNotifications];
                                               }]];
+    /*
     [section addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"LINKED_DEVICES_TITLE",
                                                               @"Menu item and navbar title for the device manager")
                                               actionBlock:^{
                                                   [weakSelf showLinkedDevices];
                                               }]];
+     */
     [section addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"SETTINGS_ADVANCED_TITLE", @"")
                                               actionBlock:^{
                                                   [weakSelf showAdvanced];
