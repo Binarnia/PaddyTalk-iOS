@@ -48,6 +48,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (class, readonly, nonatomic) UIColor *ows_gray95Color;
 @property (class, readonly, nonatomic) UIColor *ows_blackColor;
 
+@property (class, readonly, nonatomic) UIColor *ows_paddy_red;
+
 // TODO: Remove
 @property (class, readonly, nonatomic) UIColor *ows_darkSkyBlueColor;
 

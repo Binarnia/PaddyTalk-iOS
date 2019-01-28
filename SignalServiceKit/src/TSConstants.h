@@ -23,6 +23,19 @@ typedef NS_ENUM(NSInteger, TSWhisperMessageType) {
 
 //#ifndef DEBUG
 
+
+// Production
+#define textSecureWebSocketAPI @"wss://api.paddytalk.com/v1/websocket/"
+#define textSecureServerURL @"https://api.paddytalk.com/"
+#define textSecureCDNServerURL @"https://cdn.paddytalk.com/profiles"
+// Use same reflector for service and CDN
+#define textSecureServiceReflectorHost @"api.paddytalk.com"
+#define textSecureCDNReflectorHost @"api.paddytalk.com"
+#define contactDiscoveryURL @"https://api.directory.signal.org"
+#define kUDTrustRoot @"BXu6QIKVz5MA8gstzfOgRQGqyLqOwNKHL6INkv3IHWMF"
+#define USING_PRODUCTION_SERVICE
+
+/*
 // Production
 #define textSecureWebSocketAPI @"wss://textsecure-service.whispersystems.org/v1/websocket/"
 #define textSecureServerURL @"https://textsecure-service.whispersystems.org/"
@@ -33,7 +46,7 @@ typedef NS_ENUM(NSInteger, TSWhisperMessageType) {
 #define contactDiscoveryURL @"https://api.directory.signal.org"
 #define kUDTrustRoot @"BXu6QIKVz5MA8gstzfOgRQGqyLqOwNKHL6INkv3IHWMF"
 #define USING_PRODUCTION_SERVICE
-
+*/
 //#else
 
 // Staging

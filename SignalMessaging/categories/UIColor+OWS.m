@@ -14,13 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)ows_signalBrandBlueColor
 {
-    return [UIColor colorWithRed:0.1135657504f green:0.4787300229f blue:0.89595204589999999f alpha:1.];
+    return UIColor.ows_paddy_red; //[UIColor colorWithRed:0.1135657504f green:0.4787300229f blue:0.89595204589999999f alpha:1.];
 }
 
 + (UIColor *)ows_materialBlueColor
 {
     // blue: #2090EA
-    return [UIColor colorWithRed:32.f / 255.f green:144.f / 255.f blue:234.f / 255.f alpha:1.f];
+    return UIColor.ows_paddy_red; //[UIColor colorWithRed:32.f / 255.f green:144.f / 255.f blue:234.f / 255.f alpha:1.f];
 }
 
 + (UIColor *)ows_darkIconColor
@@ -143,6 +143,11 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 #pragma mark - GreyScale
+
++ (UIColor *)ows_paddy_red
+{
+    return [UIColor colorWithRed:217.f / 255.f green:50.f / 255.f blue:49.f / 255.f alpha:1.f];
+}
 
 + (UIColor *)ows_whiteColor
 {
