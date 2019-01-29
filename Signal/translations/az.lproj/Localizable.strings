@@ -805,7 +805,7 @@
 "EDIT_TXT" = "Edit";
 
 /* body of email sent to contacts when inviting to install PaddyTalk. Embeds {{link to install PaddyTalk}} and {{link to the PaddyTalk home page}} */
-"EMAIL_INVITE_BODY" = "Hey,\n\nLately I've been using PaddyTalk to keep the conversations on my iPhone private. I'd like you to install it too, so we can be confident that only you and I can read our messages or hear our calls.\n\nPaddyTalk is available for iPhones and Android. Get it here: %@\n\nPaddyTalk works like your existing messaging app. We can send pictures and video, make calls, and start group chats. The best part is, no one else can see any of it, not even the people who make PaddyTalk!\n\nYou can read more about Open Whisper Systems, the people who make PaddyTalk, here: %@";
+"EMAIL_INVITE_BODY" = "Hey,\n\nLately I've been using PaddyTalk to keep the conversations on my iPhone private. I'd like you to install it too, so we can be confident that only you and I can read our messages or hear our calls.\n\nPaddyTalk is available for iPhones and Android. Get it here: %@\n\nPaddyTalk works like your existing messaging app. We can send pictures and video, make calls, and start group chats. The best part is, no one else can see any of it, not even the people who make PaddyTalk!\n\nYou can read more here: %@";
 
 /* subject of email sent to contacts when inviting to install PaddyTalk */
 "EMAIL_INVITE_SUBJECT" = "Let's switch to PaddyTalk";

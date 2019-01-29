@@ -3630,14 +3630,13 @@ typedef enum : NSUInteger {
     OWSAssertIsOnMainThread();
 
     // make sure toolbar extends below iPhoneX home button.
-    self.view.backgroundColor = Theme.toolbarBackgroundColor;
+    self.view.backgroundColor = Theme.backgroundColor;
     
     UIImage *image = [UIImage imageNamed:@"chat_background_view"];
     UIImageView *backgroundImage = [[UIImageView alloc] initWithImage: image];
     backgroundImage.frame = self.collectionView.frame;
     
     [self.view addSubview:backgroundImage];
-                                    
     
     self.collectionView.backgroundColor = [UIColor clearColor];// Theme.backgroundColor;
     

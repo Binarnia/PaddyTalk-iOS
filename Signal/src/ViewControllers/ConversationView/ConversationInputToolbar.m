@@ -87,10 +87,10 @@ const CGFloat kMaxTextViewHeight = 98;
     self.layoutMargins = UIEdgeInsetsZero;
 
     if (UIAccessibilityIsReduceTransparencyEnabled()) {
-        self.backgroundColor = Theme.toolbarBackgroundColor;
+        self.backgroundColor = Theme.backgroundColor;
     } else {
         CGFloat alpha = OWSNavigationBar.backgroundBlurMutingFactor;
-        self.backgroundColor = [Theme.toolbarBackgroundColor colorWithAlphaComponent:alpha];
+        self.backgroundColor = [Theme.backgroundColor colorWithAlphaComponent:alpha];
 
         UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:Theme.barBlurEffect];
         blurEffectView.layer.zPosition = -1;

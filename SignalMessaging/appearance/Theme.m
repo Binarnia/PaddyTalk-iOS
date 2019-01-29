@@ -58,7 +58,7 @@ NSString *const ThemeKeyThemeEnabled = @"ThemeKeyThemeEnabled";
 
 + (UIColor *)primaryColor
 {
-    return (Theme.isDarkThemeEnabled ? Theme.darkThemePrimaryColor : UIColor.ows_gray90Color);
+    return (Theme.isDarkThemeEnabled ? Theme.darkThemePrimaryColor : UIColor.ows_whiteColor);
 }
 
 + (UIColor *)secondaryColor
@@ -100,7 +100,7 @@ NSString *const ThemeKeyThemeEnabled = @"ThemeKeyThemeEnabled";
 
 + (UIColor *)navbarIconColor
 {
-    return (Theme.isDarkThemeEnabled ? self.darkThemeNavbarIconColor : UIColor.ows_gray60Color);
+    return (Theme.isDarkThemeEnabled ? self.darkThemeNavbarIconColor : UIColor.ows_whiteColor);
 }
 
 + (UIColor *)darkThemeNavbarIconColor;

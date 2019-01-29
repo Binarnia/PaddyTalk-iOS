@@ -72,7 +72,7 @@
     [helpSection addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"SETTINGS_SUPPORT", @"")
                                                   actionBlock:^{
                                                       [[UIApplication sharedApplication]
-                                                          openURL:[NSURL URLWithString:@"https://support.signal.org"]];
+                                                          openURL:[NSURL URLWithString:@"https://bantuan.paddytalk.com"]];
                                                   }]];
     [contents addSection:helpSection];
 
