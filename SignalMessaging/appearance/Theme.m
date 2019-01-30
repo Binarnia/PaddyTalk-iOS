@@ -58,7 +58,7 @@ NSString *const ThemeKeyThemeEnabled = @"ThemeKeyThemeEnabled";
 
 + (UIColor *)primaryColor
 {
-    return (Theme.isDarkThemeEnabled ? Theme.darkThemePrimaryColor : UIColor.ows_whiteColor);
+    return (Theme.isDarkThemeEnabled ? Theme.darkThemePrimaryColor : UIColor.ows_gray60Color);
 }
 
 + (UIColor *)secondaryColor
@@ -110,7 +110,7 @@ NSString *const ThemeKeyThemeEnabled = @"ThemeKeyThemeEnabled";
 
 + (UIColor *)navbarTitleColor
 {
-    return Theme.primaryColor;
+    return UIColor.ows_whiteColor;
 }
 
 + (UIColor *)toolbarBackgroundColor
