@@ -146,13 +146,13 @@ public class ConversationStyle: NSObject {
     }
 
     @objc
-    public let bubbleColorOutgoingFailed = UIColor.ows_darkSkyBlue
+    public let bubbleColorOutgoingFailed = UIColor.ows_paddy_red
 
     @objc
-    public let bubbleColorOutgoingSending = UIColor.ows_darkSkyBlue
+    public let bubbleColorOutgoingSending = UIColor.ows_paddy_red
 
     @objc
-    public let bubbleColorOutgoingSent = UIColor.ows_darkSkyBlue
+    public let bubbleColorOutgoingSent = UIColor.ows_paddy_red
 
     @objc
     public let dateBreakTextColor = UIColor.ows_gray60

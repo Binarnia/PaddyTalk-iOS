@@ -194,6 +194,7 @@ NSString *const kProfileView_LastPresentedDate = @"kProfileView_LastPresentedDat
                                      initWithString:NSLocalizedString(@"PROFILE_VIEW_PROFILE_DESCRIPTION",
                                                         @"Description of the user profile.")
                                          attributes:@{}]];
+    /*
     [text appendAttributedString:[[NSAttributedString alloc] initWithString:@" " attributes:@{}]];
     [text appendAttributedString:[[NSAttributedString alloc]
                                      initWithString:NSLocalizedString(@"PROFILE_VIEW_PROFILE_DESCRIPTION_LINK",
@@ -203,6 +204,7 @@ NSString *const kProfileView_LastPresentedDate = @"kProfileView_LastPresentedDat
                                                  @(NSUnderlineStyleSingle | NSUnderlinePatternSolid),
                                              NSForegroundColorAttributeName : [UIColor ows_materialBlueColor],
                                          }]];
+     */
     infoLabel.attributedText = text;
     infoLabel.numberOfLines = 0;
     infoLabel.lineBreakMode = NSLineBreakByWordWrapping;

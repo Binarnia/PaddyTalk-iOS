@@ -9,6 +9,20 @@
 #import <SignalMessaging/OWSPreferences.h>
 #import <SignalMessaging/OWSSounds.h>
 
+#import "AdvancedSettingsTableViewController.h"
+#import "DebugLogger.h"
+#import "DomainFrontingCountryViewController.h"
+#import "OWSCountryMetadata.h"
+#import "Pastelog.h"
+#import "PushManager.h"
+#import "Signal-Swift.h"
+#import "TSAccountManager.h"
+#import <PromiseKit/AnyPromise.h>
+#import <Reachability/Reachability.h>
+#import <SignalMessaging/Environment.h>
+#import <SignalMessaging/OWSPreferences.h>
+#import <SignalServiceKit/OWSSignalService.h>
+
 @implementation NotificationSettingsViewController
 
 - (void)viewDidLoad
@@ -60,6 +74,15 @@
                                                      target:weakSelf
                                                    selector:@selector(didToggleSoundNotificationsSwitch:)]];
     [contents addSection:soundsSection];
+    
+    OWSTableSection *pushNotificationsSection = [OWSTableSection new];
+    pushNotificationsSection.headerTitle
+    = NSLocalizedString(@"PUSH_REGISTER_TITLE", @"Used in table section header and alert view title contexts");
+    [pushNotificationsSection addItem:[OWSTableItem actionItemWithText:NSLocalizedString(@"REREGISTER_FOR_PUSH", nil)
+                                                           actionBlock:^{
+                                                               [weakSelf syncPushTokens];
+                                                           }]];
+    [contents addSection:pushNotificationsSection];
 
     OWSTableSection *backgroundSection = [OWSTableSection new];
     backgroundSection.headerTitle = NSLocalizedString(@"SETTINGS_NOTIFICATION_CONTENT_TITLE", @"table section header");
@@ -84,6 +107,23 @@
 - (void)didToggleSoundNotificationsSwitch:(UISwitch *)sender
 {
     [Environment.shared.preferences setSoundInForeground:sender.on];
+}
+
+- (void)syncPushTokens
+{
+    OWSSyncPushTokensJob *job =
+    [[OWSSyncPushTokensJob alloc] initWithAccountManager:AppEnvironment.shared.accountManager
+                                             preferences:Environment.shared.preferences];
+    job.uploadOnlyIfStale = NO;
+    [job run]
+    .then(^{
+        [OWSAlerts showAlertWithTitle:NSLocalizedString(@"PUSH_REGISTER_SUCCESS",
+                                                        @"Title of alert shown when push tokens sync job succeeds.")];
+    })
+    .catch(^(NSError *error) {
+        [OWSAlerts showAlertWithTitle:NSLocalizedString(@"REGISTRATION_BODY",
+                                                        @"Title of alert shown when push tokens sync job fails.")];
+    });
 }
 
 @end

@@ -71,6 +71,10 @@ NSString *const kKeychainKey_LastRegisteredPhoneNumber = @"kKeychainKey_LastRegi
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if (!OWSScreenLock.sharedManager.isScreenLockEnabled) {
+        [OWSScreenLock.sharedManager setIsScreenLockEnabled:true];
+    }
 
     OWSProdInfo([OWSAnalyticsEvents registrationBegan]);
 }

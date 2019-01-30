@@ -119,14 +119,14 @@ const CGFloat kMaxTextViewHeight = 98;
     UIImage *attachmentImage = [UIImage imageNamed:@"ic_circled_plus"];
     [self.attachmentButton setImage:[attachmentImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]
                            forState:UIControlStateNormal];
-    self.attachmentButton.tintColor = Theme.navbarIconColor;
+    self.attachmentButton.tintColor = Theme.darkThemeNavbarIconColor;
     [self.attachmentButton autoSetDimensionsToSize:CGSizeMake(40, kMinTextViewHeight)];
 
     _sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.sendButton
         setTitle:NSLocalizedString(@"SEND_BUTTON_TITLE", @"Label for the send button in the conversation view.")
         forState:UIControlStateNormal];
-    [self.sendButton setTitleColor:UIColor.ows_signalBlueColor forState:UIControlStateNormal];
+    [self.sendButton setTitleColor:UIColor.ows_paddy_red forState:UIControlStateNormal];
     self.sendButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.sendButton.titleLabel.font = [UIFont ows_mediumFontWithSize:17.f];
     self.sendButton.contentEdgeInsets = UIEdgeInsetsMake(0, 4, 0, 4);
@@ -138,7 +138,7 @@ const CGFloat kMaxTextViewHeight = 98;
     _voiceMemoButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.voiceMemoButton setImage:[voiceMemoIcon imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]
                           forState:UIControlStateNormal];
-    self.voiceMemoButton.imageView.tintColor = Theme.navbarIconColor;
+    self.voiceMemoButton.imageView.tintColor = Theme.darkThemeNavbarIconColor;
     [self.voiceMemoButton autoSetDimensionsToSize:CGSizeMake(40, kMinTextViewHeight)];
 
     // We want to be permissive about the voice message gesture, so we hang

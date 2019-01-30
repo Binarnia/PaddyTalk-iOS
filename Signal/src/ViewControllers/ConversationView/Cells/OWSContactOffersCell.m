@@ -126,7 +126,7 @@ NS_ASSUME_NONNULL_BEGIN
              self.addToProfileWhitelistButton,
              self.blockButton,
          ]) {
-        [button setTitleColor:[UIColor ows_signalBlueColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor ows_paddy_red] forState:UIControlStateNormal];
         [button setBackgroundColor:Theme.conversationButtonBackgroundColor];
     }
 

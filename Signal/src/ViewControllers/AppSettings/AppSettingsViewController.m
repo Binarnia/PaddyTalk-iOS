@@ -172,19 +172,21 @@
          */
     }
 
-    [section addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"SETTINGS_INVITE_TITLE",
-                                                              @"Settings table view cell label")
+    [section addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"SETTINGS_NOTIFICATIONS", nil)
                                               actionBlock:^{
-                                                  [weakSelf showInviteFlow];
+                                                  [weakSelf showNotifications];
                                               }]];
+    
     [section addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"SETTINGS_PRIVACY_TITLE",
                                                               @"Settings table view cell label")
                                               actionBlock:^{
                                                   [weakSelf showPrivacy];
                                               }]];
-    [section addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"SETTINGS_NOTIFICATIONS", nil)
+    
+    [section addItem:[OWSTableItem disclosureItemWithText:@"Add friends"//NSLocalizedString(@"SETTINGS_INVITE_TITLE",
+                      //                                                              @"Settings table view cell label")
                                               actionBlock:^{
-                                                  [weakSelf showNotifications];
+                                                  [weakSelf showInviteFlow];
                                               }]];
     /*
     [section addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"LINKED_DEVICES_TITLE",
@@ -192,11 +194,12 @@
                                               actionBlock:^{
                                                   [weakSelf showLinkedDevices];
                                               }]];
-     */
+     
     [section addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"SETTINGS_ADVANCED_TITLE", @"")
                                               actionBlock:^{
                                                   [weakSelf showAdvanced];
                                               }]];
+     */
     BOOL isBackupEnabled = [OWSBackup.sharedManager isBackupEnabled];
     BOOL showBackup = (OWSBackup.isFeatureEnabled && isBackupEnabled);
     if (showBackup) {
@@ -206,7 +209,7 @@
                                                       [weakSelf showBackup];
                                                   }]];
     }
-    [section addItem:[OWSTableItem disclosureItemWithText:NSLocalizedString(@"SETTINGS_ABOUT", @"")
+    [section addItem:[OWSTableItem disclosureItemWithText:@"Help"//NSLocalizedString(@"SETTINGS_ABOUT", @"")
                                               actionBlock:^{
                                                   [weakSelf showAbout];
                                               }]];
@@ -382,8 +385,10 @@
 
 - (void)showAbout
 {
-    AboutTableViewController *vc = [[AboutTableViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://bantuan.paddytalk.com"]];
+    
+//    AboutTableViewController *vc = [[AboutTableViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)showBackup

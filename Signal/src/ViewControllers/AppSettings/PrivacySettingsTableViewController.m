@@ -117,6 +117,7 @@ static NSString *const kSealedSenderInfoURL = @"https://signal.org/blog/sealed-s
                                                              selector:@selector(didToggleTypingIndicatorsSwitch:)]];
     [contents addSection:typingIndicatorsSection];
 
+    /*
     OWSTableSection *screenLockSection = [OWSTableSection new];
     screenLockSection.headerTitle = NSLocalizedString(
         @"SETTINGS_SCREEN_LOCK_SECTION_TITLE", @"Title for the 'screen lock' section of the privacy settings.");
@@ -130,6 +131,7 @@ static NSString *const kSealedSenderInfoURL = @"https://signal.org/blog/sealed-s
                                 target:self
                               selector:@selector(isScreenLockEnabledDidChange:)]];
     [contents addSection:screenLockSection];
+    */
 
     if (OWSScreenLock.sharedManager.isScreenLockEnabled) {
         OWSTableSection *screenLockTimeoutSection = [OWSTableSection new];
@@ -426,6 +428,7 @@ static NSString *const kSealedSenderInfoURL = @"https://signal.org/blog/sealed-s
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+/*
 - (void)isScreenLockEnabledDidChange:(UISwitch *)sender
 {
     BOOL shouldBeEnabled = sender.isOn;
@@ -439,6 +442,7 @@ static NSString *const kSealedSenderInfoURL = @"https://signal.org/blog/sealed-s
 
     [OWSScreenLock.sharedManager setIsScreenLockEnabled:shouldBeEnabled];
 }
+ */
 
 - (void)screenLockDidChange:(NSNotification *)notification
 {

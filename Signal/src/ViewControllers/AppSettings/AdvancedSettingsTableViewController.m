@@ -107,6 +107,7 @@ NS_ASSUME_NONNULL_BEGIN
 
     [contents addSection:loggingSection];
 
+    /*
     OWSTableSection *pushNotificationsSection = [OWSTableSection new];
     pushNotificationsSection.headerTitle
         = NSLocalizedString(@"PUSH_REGISTER_TITLE", @"Used in table section header and alert view title contexts");
@@ -115,6 +116,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                                [weakSelf syncPushTokens];
                                                            }]];
     [contents addSection:pushNotificationsSection];
+     */
 
     // Censorship circumvention has certain disadvantages so it should only be
     // used if necessary.  Therefore:
@@ -237,6 +239,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Actions
 
+/*
 - (void)syncPushTokens
 {
     OWSSyncPushTokensJob *job =
@@ -253,6 +256,7 @@ NS_ASSUME_NONNULL_BEGIN
                                               @"Title of alert shown when push tokens sync job fails.")];
         });
 }
+ */
 
 - (void)didToggleEnableLogSwitch:(UISwitch *)sender
 {
