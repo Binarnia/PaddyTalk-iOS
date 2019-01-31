@@ -59,8 +59,8 @@ NSString *NSStringForScreenLockUIState(ScreenLockUIState value)
 
     const CGFloat kButtonHeight = 40.f;
     OWSFlatButton *button =
-        [OWSFlatButton buttonWithTitle:NSLocalizedString(@"SCREEN_LOCK_UNLOCK_SIGNAL",
-                                           @"Label for button on lock screen that lets users unlock Signal.")
+        [OWSFlatButton buttonWithTitle:@"Unlock PaddyTalk"//NSLocalizedString(@"SCREEN_LOCK_UNLOCK_SIGNAL",
+                                         //  @"Label for button on lock screen that lets users unlock Signal.")
                                   font:[OWSFlatButton fontForHeight:kButtonHeight]
                             titleColor:[UIColor ows_materialBlueColor]
                        backgroundColor:[UIColor whiteColor]

@@ -166,7 +166,7 @@ typedef void (^SystemMessageActionBlock)(void);
     OWSAssertDebug(self.conversationStyle);
     OWSAssertDebug(self.viewItem);
 
-    self.cellBackgroundView.backgroundColor = [Theme backgroundColor];
+    self.cellBackgroundView.backgroundColor = [UIColor clearColor];//[Theme backgroundColor];
 
     [self.button setBackgroundColor:Theme.conversationButtonBackgroundColor];
 
