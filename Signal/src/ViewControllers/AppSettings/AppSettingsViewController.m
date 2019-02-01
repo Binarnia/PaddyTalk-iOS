@@ -229,11 +229,11 @@
         [section addItem:[self destructiveButtonItemWithTitle:NSLocalizedString(@"SETTINGS_DELETE_DATA_BUTTON",
                                                                   @"Label for 'delete data' button.")
                                                      selector:@selector(deleteUnregisterUserData)
-                                                        color:[UIColor ows_destructiveRedColor]]];
+                                                        color:[UIColor ows_paddy_red]]];
     } else {
         [section addItem:[self destructiveButtonItemWithTitle:NSLocalizedString(@"SETTINGS_DELETE_ACCOUNT_BUTTON", @"")
                                                      selector:@selector(unregisterUser)
-                                                        color:[UIColor ows_destructiveRedColor]]];
+                                                        color:[UIColor ows_paddy_red]]];
     }
 
     [contents addSection:section];
