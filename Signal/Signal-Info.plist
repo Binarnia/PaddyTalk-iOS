@@ -6,10 +6,14 @@
 	<dict>
 		<key>CarthageVersion</key>
 		<string>0.30.1</string>
+		<key>DateTime</key>
+		<string>Tue Feb  5 19:19:39 UTC 2019</string>
 		<key>OSXVersion</key>
 		<string>10.14.2</string>
 		<key>WebRTCCommit</key>
 		<string>ca71024b4993ba95e3e6b8d0758004cffc54ddaf M70</string>
+		<key>XCodeVersion</key>
+		<string>1000.1010</string>
 	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
@@ -47,7 +51,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>6</string>
+	<string>8</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LOGS_EMAIL</key>
@@ -79,6 +83,8 @@
 			<key>paddytalk.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionRequiresForwardSecrecy</key>
 				<true/>
 				<key>NSIncludesSubdomains</key>
 				<true/>

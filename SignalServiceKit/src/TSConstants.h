@@ -27,10 +27,10 @@ typedef NS_ENUM(NSInteger, TSWhisperMessageType) {
 // Production
 #define textSecureWebSocketAPI @"wss://api.paddytalk.com/v1/websocket/"
 #define textSecureServerURL @"https://api.paddytalk.com/"
-#define textSecureCDNServerURL @"https://cdn.paddytalk.com/profiles"
+#define textSecureCDNServerURL @"http://mars.paddytalk.com/profiles"
 // Use same reflector for service and CDN
 #define textSecureServiceReflectorHost @"api.paddytalk.com"
-#define textSecureCDNReflectorHost @"cdn.paddytalk.com/profiles"
+#define textSecureCDNReflectorHost @"mars.paddytalk.com/profiles"
 #define contactDiscoveryURL @"https://api.directory.signal.org"
 #define kUDTrustRoot @"BXu6QIKVz5MA8gstzfOgRQGqyLqOwNKHL6INkv3IHWMF"
 #define USING_PRODUCTION_SERVICE
