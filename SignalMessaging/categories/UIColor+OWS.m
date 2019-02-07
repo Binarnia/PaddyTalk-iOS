@@ -146,7 +146,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)ows_paddy_red
 {
-    return [UIColor colorWithRed:143.f / 255.f green:0 blue:0 alpha:1.f];
+    return [UIColor colorWithRed:217.f / 255.f green:50.f / 255.f blue:49.f / 255.f alpha:1.f];
 }
 
 + (UIColor *)ows_whiteColor
